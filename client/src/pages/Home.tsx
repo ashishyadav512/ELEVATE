@@ -60,24 +60,22 @@ const Home = () => {
                   Experience the perfect fusion of innovative design and premium craftsmanship with our exclusive limited-edition collection.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/shop">
-                    <motion.a
-                      className="px-8 py-4 bg-neon-cyan text-dark-900 font-bold uppercase tracking-wider inline-block rounded-sm hover:bg-white transition-all duration-300 text-center"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link href="/shop" className="px-8 py-4 bg-neon-cyan text-dark-900 font-bold uppercase tracking-wider inline-block rounded-sm hover:bg-white transition-all duration-300 text-center">
                       Shop Collection
-                    </motion.a>
-                  </Link>
-                  <Link href="/about">
-                    <motion.a
-                      className="px-8 py-4 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 text-center"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link href="/about" className="px-8 py-4 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 text-center">
                       Our Story
-                    </motion.a>
-                  </Link>
+                    </Link>
+                  </motion.div>
                 </div>
               </motion.div>
               
@@ -184,15 +182,17 @@ const Home = () => {
             </motion.div>
             
             <div className="flex justify-center mt-12">
-              <Link href="/shop">
-                <motion.a 
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link 
+                  href="/shop" 
                   className="px-8 py-4 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300"
-                  whileHover={{ scale: 1.05, borderColor: '#00F0FF', color: '#00F0FF' }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   View All Products
-                </motion.a>
-              </Link>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>
