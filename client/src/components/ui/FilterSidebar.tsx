@@ -96,7 +96,8 @@ const FilterSidebar = ({
               style={{ 
                 backgroundColor: color.value,
                 borderWidth: '2px',
-                borderColor: selectedColors.includes(color.name) ? '#00F0FF' : '#2D2D2D'
+                borderColor: selectedColors.includes(color.name) ? '#00F0FF' : '#2D2D2D',
+                boxShadow: selectedColors.includes(color.name) ? '0 0 8px rgba(0, 240, 255, 0.6)' : 'none'
               }}
               onClick={() => onColorChange(color.name)}
               whileHover={{ scale: 1.1 }}
