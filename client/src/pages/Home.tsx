@@ -50,8 +50,11 @@ const Home = () => {
           </div>
           
           {/* Accent lines */}
-          <div className="absolute top-[20%] right-0 w-1/3 h-px bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent"></div>
-          <div className="absolute bottom-[30%] left-0 w-1/4 h-px bg-gradient-to-r from-transparent via-neon-cyan/20 to-transparent"></div>
+          <div className="absolute top-[20%] right-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+
+          <div className="absolute bottom-[30%] left-0 w-1/4 h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"></div>
+
+
           
           <div className="container mx-auto px-6 z-10 pt-20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -60,15 +63,19 @@ const Home = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="mb-2 inline-block">
-                  <span className="text-xs uppercase tracking-widest text-neon-cyan/80">Luxury Footwear Collection</span>
+                <div className="mb-3 inline-block">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-cyan-500">
+                    Luxury Footwear Collection
+                  </span>
                 </div>
+
                 <h2 className="text-4xl md:text-7xl font-bold font-montserrat tracking-tight leading-none mb-4">
                   <span className="block">REDEFINE</span>
-                  <span className="text-neon-cyan relative inline-block">
+                  <span className="text-cyan-400 relative inline-block">
                     LUXURY
-                    <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-cyan to-transparent"></span>
+                    <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></span>
                   </span>
+
                 </h2>
                 <p className="text-light-300 md:text-lg mb-8 max-w-lg leading-relaxed">
                   Experience the perfect fusion of innovative design and premium craftsmanship with our exclusive limited-edition collection.
@@ -78,17 +85,26 @@ const Home = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Link href="/shop" className="px-8 py-4 bg-neon-cyan text-dark-900 font-bold uppercase tracking-wider inline-block rounded-sm hover:bg-white transition-all duration-300 text-center">
+                    <Link
+                      href="/shop"
+                      className="px-8 py-4 bg-cyan-400 text-gray-900 font-bold uppercase tracking-wider inline-block rounded-sm hover:bg-white transition-all duration-300 text-center"
+
+                    >
                       Shop Collection
                     </Link>
+
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Link href="/about" className="px-8 py-4 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 text-center">
+                    <Link 
+                      href="/about" 
+                      className="px-8 py-4 border border-gray-300 text-gray-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 text-center"
+                    >
                       Our Story
                     </Link>
+
                   </motion.div>
                 </div>
               </motion.div>
@@ -105,13 +121,21 @@ const Home = () => {
                       <img 
                         src={featuredProducts[0].imageUrls[0]} 
                         alt={featuredProducts[0].name} 
-                        className="w-full h-auto object-cover transform rotate-[-25deg] shadow-2xl rounded-lg border-2 border-neon-cyan/30"
+                        className="w-full h-auto object-cover transform rotate-[-25deg] shadow-2xl rounded-lg border-2 border-cyan-500/30"
+                    
+
+
+
                       />
                       {/* Glowing effect */}
                       <div className="absolute inset-0 rounded-lg opacity-50 rotate-[-25deg] shadow-[0_0_20px_rgba(0,240,255,0.5)] pointer-events-none"></div>
                     </div>
-                    <div className="absolute -bottom-4 -right-4 bg-dark-700/80 backdrop-blur-sm p-4 rounded-md border border-neon-cyan/30">
-                      <span className="text-neon-cyan font-bebas text-xl tracking-wider">${featuredProducts[0].price}</span>
+                    <div className="absolute -bottom-4 -right-4 bg-dark-700/80 backdrop-blur-sm p-4 rounded-md border border-cyan-400/30">
+
+                      <span className="text-cyan-400 font-bebas text-xl tracking-wider">
+                        ${featuredProducts[0].price}
+                      </span>
+
                       <h3 className="text-light-100 font-medium tracking-wide">{featuredProducts[0].name.toUpperCase()}</h3>
                     </div>
                   </>
@@ -131,21 +155,26 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                FEATURED <span className="text-neon-cyan">CATEGORIES</span>
+                FEATURED <span className="text-cyan-400">CATEGORIES</span>
+
               </motion.h2>
               <div className="flex space-x-3">
                 <motion.button 
-                  className="w-12 h-12 border border-light-300 rounded-full flex items-center justify-center hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300"
+                  className="w-12 h-12 border border-gray-200 rounded-full flex items-center justify-center text-gray-900 hover:border-cyan-500 hover:text-cyan-500 transition-all duration-300"
+
+
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Previous category"
                 >
+
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m15 18-6-6 6-6"></path>
                   </svg>
                 </motion.button>
                 <motion.button 
-                  className="w-12 h-12 bg-neon-cyan text-dark-900 rounded-full flex items-center justify-center hover:bg-white transition-all duration-300"
+                  className="w-12 h-12 bg-neon-cyan text-dark-900 rounded-full flex items-center justify-center hover:bg-white hover:text-dark-900 transition-all duration-300"
+
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Next category"
@@ -182,7 +211,8 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              NEW <span className="text-neon-cyan">ARRIVALS</span>
+              NEW <span className="text-cyan-400">ARRIVALS</span>
+
             </motion.h2>
             
             <motion.div 
@@ -207,6 +237,7 @@ const Home = () => {
                 <Link 
                   href="/shop" 
                   className="px-8 py-4 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300"
+
                 >
                   View All Products
                 </Link>

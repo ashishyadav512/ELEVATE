@@ -79,7 +79,7 @@ const ContactForm = () => {
             type="text" 
             id="name" 
             {...register('name')}
-            className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-neon-cyan focus:outline-none"
+            className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-cyan-400 focus:outline-none"
             placeholder="John Doe"
           />
           {errors.name && (
@@ -92,7 +92,7 @@ const ContactForm = () => {
             type="email" 
             id="email" 
             {...register('email')}
-            className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-neon-cyan focus:outline-none"
+            className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-cyan-400 focus:outline-none"
             placeholder="john@example.com"
           />
           {errors.email && (
@@ -107,7 +107,7 @@ const ContactForm = () => {
           type="text" 
           id="subject" 
           {...register('subject')}
-          className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-neon-cyan focus:outline-none"
+          className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-cyan-400 focus:outline-none"
           placeholder="How can we help you?"
         />
         {errors.subject && (
@@ -121,7 +121,7 @@ const ContactForm = () => {
           id="message" 
           rows={6} 
           {...register('message')}
-          className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-neon-cyan focus:outline-none"
+          className="w-full bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-cyan-400 focus:outline-none"
           placeholder="Tell us more about your inquiry..."
         ></textarea>
         {errors.message && (
@@ -134,7 +134,7 @@ const ContactForm = () => {
           type="checkbox" 
           id="privacy" 
           {...register('privacy')}
-          className="form-checkbox bg-dark-600 border-dark-500 text-neon-cyan rounded focus:ring-0 focus:ring-offset-0 mr-2"
+          className="form-checkbox bg-dark-600 border-dark-500 text-cyan-400 rounded focus:ring-0 focus:ring-offset-0 mr-2"
         />
         <label htmlFor="privacy" className="text-light-300 text-sm">
           I agree to the <a href="#" className="text-neon-cyan hover:underline">Privacy Policy</a>
@@ -146,7 +146,7 @@ const ContactForm = () => {
       
       <motion.button 
         type="submit" 
-        className="w-full py-3 bg-neon-cyan text-dark-900 font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+        className="w-full py-3 bg-cyan-400 text-dark-900 font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         disabled={isSubmitting}

@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <h1 className="text-2xl font-bold font-montserrat tracking-wider text-light-100">
-              ELEVATE<span className="text-neon-cyan">.</span>
+              ELEVATE<span className="text-cyan-300">.</span>
             </h1>
           </Link>
           

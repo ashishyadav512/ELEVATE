@@ -18,7 +18,7 @@ const SizeSelector = ({ sizes, onChange }: SizeSelectorProps) => {
     <div className="mb-8">
       <div className="flex justify-between mb-3">
         <h3 className="font-semibold">SELECT SIZE</h3>
-        <button className="text-neon-cyan text-sm">Size Guide</button>
+        <button className="text-cyan-400 text-sm">Size Guide</button>
       </div>
       <div className="grid grid-cols-4 gap-2">
         {sizes.map((size) => (
@@ -26,9 +26,9 @@ const SizeSelector = ({ sizes, onChange }: SizeSelectorProps) => {
             key={size}
             className={`py-2 border ${
               selectedSize === size
-                ? 'border-neon-cyan text-neon-cyan'
+                ? 'border-neon-cyan text-cyan-400'
                 : 'border-dark-600 text-light-300'
-            } rounded hover:border-neon-cyan hover:text-neon-cyan`}
+            } rounded hover:border-neon-cyan hover:text-cyan-400`}
             onClick={() => handleSizeSelect(size)}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.1 }}

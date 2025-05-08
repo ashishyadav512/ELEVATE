@@ -16,9 +16,9 @@ const Shop = () => {
 
   // State for filters
   const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([50, 320]);
-  const [selectedColors, setSelectedColors] = useState<string[]>(['white']);
-  const [selectedSizes, setSelectedSizes] = useState<string[]>(['8']);
+  const [priceRange, setPriceRange] = useState<[number, number]>([50, 450]);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [displayMode, setDisplayMode] = useState<'grid' | 'list'>('grid');
   const [sortOption, setSortOption] = useState<string>('featured');
@@ -104,9 +104,9 @@ const Shop = () => {
 
   const resetFilters = () => {
     setSelectedCategories([]);
-    setPriceRange([50, 320]);
-    setSelectedColors(['white']);
-    setSelectedSizes(['8']);
+    setPriceRange([50, 450]);
+    setSelectedColors([]);
+    setSelectedSizes([]);
     setSortOption('featured');
   };
 
@@ -134,7 +134,7 @@ const Shop = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4">
-            OUR <span className="text-neon-cyan">COLLECTION</span>
+            OUR <span className="text-cyan-300">COLLECTION</span>
           </h2>
           <p className="text-light-300 max-w-2xl">
             Browse our premium selection of footwear designed for performance, style, and comfort. Filter by your preferences to find your perfect pair.
@@ -196,7 +196,8 @@ const Shop = () => {
                   </button>
                 </div>
                 <select 
-                  className="bg-dark-600 border-0 text-light-100 rounded-sm px-4 py-2 focus:ring-neon-cyan"
+                  className="bg-gray-800 border-0 text-gray-100 rounded-sm px-4 py-2 focus:ring-cyan-400"
+
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
                 >
@@ -211,7 +212,8 @@ const Shop = () => {
             {/* Products */}
             {isLoading ? (
               <div className="flex justify-center items-center h-64">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-neon-cyan"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-400"></div>
+
               </div>
             ) : (
               <motion.div 
@@ -244,7 +246,8 @@ const Shop = () => {
               <div className="flex justify-center mt-12">
                 <nav className="flex space-x-2">
                   <button 
-                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-dark-600 text-light-300 hover:border-neon-cyan hover:text-neon-cyan disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 disabled:opacity-50 disabled:cursor-not-allowed"
+
                     onClick={() => paginate(currentPage - 1)}
                     disabled={currentPage === 1}
                     aria-label="Previous page"
@@ -259,9 +262,10 @@ const Shop = () => {
                       key={number + 1}
                       className={`w-10 h-10 flex items-center justify-center rounded-sm ${
                         currentPage === number + 1 
-                          ? 'bg-neon-cyan text-dark-900' 
-                          : 'border border-dark-600 text-light-300 hover:border-neon-cyan hover:text-neon-cyan'
+                          ? 'bg-cyan-400 text-gray-900' 
+                          : 'border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
                       }`}
+
                       onClick={() => paginate(number + 1)}
                     >
                       {number + 1}
@@ -269,7 +273,8 @@ const Shop = () => {
                   ))}
                   
                   <button 
-                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-dark-600 text-light-300 hover:border-neon-cyan hover:text-neon-cyan disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 disabled:opacity-50 disabled:cursor-not-allowed"
+
                     onClick={() => paginate(currentPage + 1)}
                     disabled={currentPage === totalPages}
                     aria-label="Next page"

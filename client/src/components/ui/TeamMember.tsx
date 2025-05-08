@@ -50,7 +50,7 @@ const TeamMember = ({ member }: TeamMemberProps) => {
       </div>
       <div className="p-4 text-center">
         <h3 className="font-semibold">{member.name}</h3>
-        <p className="text-neon-cyan text-sm">{member.role}</p>
+        <p className="text-cyan-400 text-sm">{member.role}</p>
       </div>
     </motion.div>
   );

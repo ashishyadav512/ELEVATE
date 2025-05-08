@@ -111,7 +111,7 @@ const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
       
       <div className="absolute bottom-3 right-3 flex space-x-2">
         <motion.button 
-          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-neon-cyan"
+          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-cyan-400"
           onClick={rotateLeft}
           whileTap={{ scale: 0.9 }}
           aria-label="Rotate left"
@@ -121,7 +121,7 @@ const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
           </svg>
         </motion.button>
         <motion.button 
-          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-neon-cyan"
+          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-cyan-400"
           onClick={rotateRight}
           whileTap={{ scale: 0.9 }}
           aria-label="Rotate right"

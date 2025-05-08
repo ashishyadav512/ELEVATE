@@ -73,16 +73,16 @@ const FilterSidebar = ({
         <h3 className="font-semibold mb-4 uppercase">Price Range</h3>
         <input
           type="range"
-          min={priceRange[0]}
-          max={500}
+          min={50}
+          max={450}
           value={priceValue}
           onChange={handlePriceChange}
           className="w-full h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer accent-neon-cyan"
         />
         <div className="flex justify-between mt-2 text-sm text-light-300">
-          <span>${priceRange[0]}</span>
-          <span>${priceValue}</span>
-          <span>${500}</span>
+          <span>${50}</span>
+          <span className="text-neon-cyan font-medium">${priceValue}</span>
+          <span>${450}</span>
         </div>
       </div>
       
@@ -114,9 +114,9 @@ const FilterSidebar = ({
               key={size}
               className={`py-2 border ${
                 selectedSizes.includes(size)
-                  ? 'border-neon-cyan text-neon-cyan'
+                  ? 'border-neon-cyan text-neon-cyan bg-dark-800'
                   : 'border-dark-600 text-light-300'
-              } rounded hover:border-neon-cyan hover:text-neon-cyan`}
+              } rounded hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300`}
               onClick={() => onSizeChange(size)}
               whileTap={{ scale: 0.95 }}
             >

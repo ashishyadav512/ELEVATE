@@ -209,6 +209,97 @@ export class MemStorage implements IStorage {
       sizes: ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12", "13"],
       tags: ["premium", "performance", "featured"]
     });
+    
+    // Add more luxury shoes
+    this.createProduct({
+      name: "Obsidian Beast",
+      slug: "obsidian-beast",
+      description: "Dominate any workout with the Obsidian Beast. Designed for elite athletes who demand the best, featuring a responsive carbon plate for explosive power, anti-slip grip pattern, and premium leather accents.",
+      shortDescription: "Elite training shoe",
+      price: 289,
+      imageUrls: [
+        "https://images.unsplash.com/photo-1543508282-6319a3e2621f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80",
+        "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"
+      ],
+      isFeatured: false,
+      isNew: true,
+      categoryId: trainingCategory.id,
+      colors: ["black", "silver", "gold"],
+      sizes: ["7", "8", "9", "10", "11", "12", "13"],
+      tags: ["training", "premium", "performance"]
+    });
+
+    this.createProduct({
+      name: "Lunar Elegance",
+      slug: "lunar-elegance",
+      description: "The Lunar Elegance redefines luxury with its handcrafted Italian leather upper, plush cushioning, and sleek silhouette. Perfect for the distinguished wearer who demands sophistication in every step.",
+      shortDescription: "Italian leather luxury sneaker",
+      price: 450,
+      imageUrls: [
+        "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80",
+        "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"
+      ],
+      isFeatured: true,
+      isNew: false,
+      categoryId: lifestyleCategory.id,
+      colors: ["white", "cream", "black"],
+      sizes: ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
+      tags: ["luxury", "leather", "premium"]
+    });
+
+    this.createProduct({
+      name: "Vortex Delta",
+      slug: "vortex-delta",
+      description: "The Vortex Delta basketball shoe provides unparalleled court feel and explosive takeoff with our patented ZeroGrav cushioning. The reinforced ankle support and multidirectional traction pattern keep you in control during your most aggressive plays.",
+      shortDescription: "Professional basketball shoe",
+      price: 310,
+      imageUrls: [
+        "https://images.unsplash.com/photo-1578116922645-3976907a7671?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80",
+        "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"
+      ],
+      isFeatured: false,
+      isNew: true,
+      categoryId: basketballCategory.id,
+      colors: ["blue", "black", "white"],
+      sizes: ["8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12", "13", "14"],
+      tags: ["basketball", "professional", "court"]
+    });
+
+    this.createProduct({
+      name: "Fusion Glide",
+      slug: "fusion-glide",
+      description: "Experience the perfect harmony of cushioning and responsiveness with the Fusion Glide. Our most technologically advanced running shoe features adaptive foam that adjusts to your stride and a breathable knit upper that moves with your foot.",
+      shortDescription: "Premium running shoe",
+      price: 275,
+      imageUrls: [
+        "https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80",
+        "https://images.unsplash.com/photo-1581345628466-b88aaa560faa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"
+      ],
+      isFeatured: true,
+      isNew: true,
+      categoryId: runningCategory.id,
+      colors: ["teal", "blue", "purple", "black"],
+      sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
+      tags: ["running", "cushioned", "responsive"]
+    });
+
+    this.createProduct({
+      name: "Carbon Legacy",
+      slug: "carbon-legacy",
+      description: "The Carbon Legacy pays homage to classic design while incorporating modern technology. Crafted with premium suede and full-grain leather, these sneakers feature subtle detailing and a comfort-focused design for the discerning collector.",
+      shortDescription: "Premium heritage sneaker",
+      price: 395,
+      imageUrls: [
+        "https://images.unsplash.com/photo-1605408499391-6368c628ef42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80",
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"
+      ],
+      isFeatured: true,
+      isNew: false,
+      categoryId: lifestyleCategory.id,
+      colors: ["brown", "tan", "black"],
+      sizes: ["7", "8", "9", "10", "11", "12"],
+      tags: ["premium", "heritage", "leather"]
+    });
 
     // Create Team Members
     this.createTeamMember({

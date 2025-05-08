@@ -45,7 +45,7 @@ const StatsCounter = ({ icon, target, label, suffix = '' }: StatsCounterProps) =
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-neon-cyan mb-2">
+      <div className="text-cyan-400 mb-2">
         {icon}
       </div>
       <h4 className="text-4xl font-bold font-bebas mb-2">

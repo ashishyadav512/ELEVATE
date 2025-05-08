@@ -44,7 +44,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4">
-            OUR <span className="text-neon-cyan">STORY</span>
+            OUR <span className="text-cyan-400">STORY</span>
           </h2>
           <p className="text-light-300">
             Since 2010, we've been driven by a passion to create footwear that blends cutting-edge technology, premium materials, and exceptional design. Our journey from a small studio to a global brand has been fueled by innovation and an unwavering commitment to quality.
@@ -91,7 +91,7 @@ const About = () => {
               </Link>
               <Link href="/contact">
                 <motion.a 
-                  className="px-6 py-3 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 text-center"
+                  className="px-6 py-3 border border-light-100 text-light-100 font-bold uppercase tracking-wider inline-block rounded-sm hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 text-center"
                   whileHover={{ scale: 1.05, borderColor: "#00F0FF", color: "#00F0FF" }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -166,7 +166,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
-            OUR <span className="text-neon-cyan">JOURNEY</span>
+            OUR <span className="text-cyan-400">JOURNEY</span>
           </h2>
           
           <div className="relative">
@@ -183,7 +183,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="flex items-center justify-center mb-4">
-                  <div className="bg-neon-cyan w-8 h-8 rounded-full flex items-center justify-center z-10">
+                  <div className="bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center z-10">
                     <span className="text-dark-900 font-bold">1</span>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="flex items-center justify-center mb-4">
-                  <div className="bg-neon-cyan w-8 h-8 rounded-full flex items-center justify-center z-10">
+                  <div className="bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center z-10">
                     <span className="text-dark-900 font-bold">2</span>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="flex items-center justify-center mb-4">
-                  <div className="bg-neon-cyan w-8 h-8 rounded-full flex items-center justify-center z-10">
+                  <div className="bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center z-10">
                     <span className="text-dark-900 font-bold">3</span>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const About = () => {
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="flex items-center justify-center mb-4">
-                  <div className="bg-neon-cyan w-8 h-8 rounded-full flex items-center justify-center z-10">
+                  <div className="bg-cyan-400 w-8 h-8 rounded-full flex items-center justify-center z-10">
                     <span className="text-dark-900 font-bold">4</span>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            MEET OUR <span className="text-neon-cyan">TEAM</span>
+            MEET OUR <span className="text-cyan-400">TEAM</span>
           </motion.h2>
           
           <motion.div 
@@ -293,13 +293,13 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
-            OUR <span className="text-neon-cyan">VALUES</span>
+            OUR <span className="text-cyan-400">VALUES</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-dark-700 p-6 rounded-lg flex flex-col items-center text-center">
               <div className="rounded-full bg-dark-600 p-4 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-neon-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2 2 7l10 5 10-5-10-5Z"></path>
                   <path d="M2 17 12 22 22 17"></path>
                   <path d="M2 12 12 17 22 12"></path>
@@ -313,7 +313,7 @@ const About = () => {
             
             <div className="bg-dark-700 p-6 rounded-lg flex flex-col items-center text-center">
               <div className="rounded-full bg-dark-600 p-4 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-neon-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 18.5a3.5 3.5 0 1 0 7 0c0-1.57.92-2.52 2.04-3.46"></path>
                   <path d="M11 10.5a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0Z"></path>
                   <path d="M15 16.6c2.5-1.3 4-2.57 4-5.1 0-3-2.6-5.5-6-5.5s-6 2.5-6 5.5c0 3 2 5 2 7.5"></path>
@@ -327,7 +327,7 @@ const About = () => {
             
             <div className="bg-dark-700 p-6 rounded-lg flex flex-col items-center text-center">
               <div className="rounded-full bg-dark-600 p-4 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-neon-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
                 </svg>
               </div>
@@ -348,7 +348,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold font-montserrat mb-4">
-            JOIN THE <span className="text-neon-cyan">ELEVATE</span> MOVEMENT
+            JOIN THE <span className="text-cyan-400">ELEVATE</span> MOVEMENT
           </h2>
           <p className="text-light-300 max-w-2xl mx-auto mb-8">
             Be part of a community that values exceptional design, performance, and sustainability. Subscribe to our newsletter for exclusive releases, behind-the-scenes content, and special offers.
@@ -357,10 +357,10 @@ const About = () => {
             <input 
               type="email" 
               placeholder="Your email address" 
-              className="flex-grow bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-neon-cyan focus:outline-none"
+              className="flex-grow bg-dark-600 border-0 rounded-sm py-3 px-4 text-light-100 placeholder-light-400 focus:ring-cyan-400 focus:outline-none"
             />
             <motion.button 
-              className="px-6 py-3 bg-neon-cyan text-dark-900 font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all duration-300"
+              className="px-6 py-3 bg-cyan-400 text-dark-900 font-bold uppercase tracking-wider rounded-sm hover:bg-white transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

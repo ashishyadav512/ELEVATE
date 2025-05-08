@@ -17,7 +17,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4">
-            GET IN <span className="text-neon-cyan">TOUCH</span>
+            GET IN <span className="text-cyan-400">TOUCH</span>
           </h2>
           <p className="text-light-300">
             Have questions about our products or services? Our team is here to help. Get in touch with us and we'll respond as soon as possible.
@@ -42,7 +42,7 @@ const Contact = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-neon-cyan">
+                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-cyan-400">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
@@ -55,7 +55,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-neon-cyan">
+                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-cyan-400">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                       </svg>
@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-neon-cyan">
+                    <div className="flex-shrink-0 mr-3 mt-1 w-8 h-8 bg-dark-600 rounded-full flex items-center justify-center text-cyan-400">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
@@ -88,7 +88,7 @@ const Contact = () => {
                 <div className="flex space-x-4">
                   <motion.a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-neon-cyan transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.1, backgroundColor: "#1A1A1A" }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="Facebook"
@@ -99,7 +99,7 @@ const Contact = () => {
                   </motion.a>
                   <motion.a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-neon-cyan transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.1, backgroundColor: "#1A1A1A" }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="Twitter"
@@ -110,7 +110,7 @@ const Contact = () => {
                   </motion.a>
                   <motion.a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-neon-cyan transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.1, backgroundColor: "#1A1A1A" }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="Instagram"
@@ -123,7 +123,7 @@ const Contact = () => {
                   </motion.a>
                   <motion.a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-neon-cyan transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.1, backgroundColor: "#1A1A1A" }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="LinkedIn"
@@ -136,7 +136,7 @@ const Contact = () => {
                   </motion.a>
                   <motion.a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-neon-cyan transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-dark-600 flex items-center justify-center text-light-300 hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.1, backgroundColor: "#1A1A1A" }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="YouTube"
@@ -187,7 +187,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold font-montserrat mb-8 text-center">
-            FREQUENTLY ASKED <span className="text-neon-cyan">QUESTIONS</span>
+            FREQUENTLY ASKED <span className="text-cyan-400">QUESTIONS</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -245,7 +245,7 @@ const Contact = () => {
         >
           <div>
             <h2 className="text-2xl font-bold font-montserrat mb-6">
-              STORE <span className="text-neon-cyan">HOURS</span>
+              STORE <span className="text-cyan-400">HOURS</span>
             </h2>
             
             <div className="bg-dark-700 p-6 rounded-lg">
@@ -272,7 +272,7 @@ const Contact = () => {
           
           <div>
             <h2 className="text-2xl font-bold font-montserrat mb-6">
-              CUSTOMER <span className="text-neon-cyan">SUPPORT</span>
+              CUSTOMER <span className="text-cyan-400">SUPPORT</span>
             </h2>
             
             <div className="bg-dark-700 p-6 rounded-lg">
@@ -298,7 +298,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neon-cyan mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-cyan-400 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     <circle cx="8" cy="10" r="1"></circle>
                     <circle cx="12" cy="10" r="1"></circle>
@@ -310,7 +310,7 @@ const Contact = () => {
               
               <div className="mt-6">
                 <motion.button 
-                  className="w-full py-3 bg-neon-cyan text-dark-900 font-bold uppercase rounded-sm hover:bg-white transition-all duration-300"
+                  className="w-full py-3 bg-cyan-400 text-dark-900 font-bold uppercase rounded-sm hover:bg-white transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
