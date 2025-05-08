@@ -257,3 +257,20 @@ input:focus, textarea:focus {
 .rotate-y-0 {
   transform: rotateY(0deg);
 }
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}

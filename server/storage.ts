@@ -183,7 +183,7 @@ export class MemStorage implements IStorage {
       shortDescription: "Basketball performance",
       price: 230,
       salePrice: 290,
-      imageUrls: ["https://images.unsplash.com/photo-1605348532760-6753d2c43329"],
+      imageUrls: ["https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80"],
       categoryId: basketballCategory.id,
       colors: ["black", "red", "white"],
       sizes: ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12", "13"],

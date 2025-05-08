@@ -43,7 +43,15 @@ const Home = () => {
           <div className="absolute inset-0 bg-dark-900 opacity-40"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-dark-900/10 via-dark-900/30 to-dark-900"></div>
           
-          <div className="radial-gradient absolute inset-0"></div>
+          {/* Animated background gradients */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(0,240,255,0.07),transparent_40%)]"></div>
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-[radial-gradient(circle_at_50%_80%,rgba(0,240,255,0.05),transparent_30%)]"></div>
+          </div>
+          
+          {/* Accent lines */}
+          <div className="absolute top-[20%] right-0 w-1/3 h-px bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent"></div>
+          <div className="absolute bottom-[30%] left-0 w-1/4 h-px bg-gradient-to-r from-transparent via-neon-cyan/20 to-transparent"></div>
           
           <div className="container mx-auto px-6 z-10 pt-20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -52,11 +60,17 @@ const Home = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
+                <div className="mb-2 inline-block">
+                  <span className="text-xs uppercase tracking-widest text-neon-cyan/80">Luxury Footwear Collection</span>
+                </div>
                 <h2 className="text-4xl md:text-7xl font-bold font-montserrat tracking-tight leading-none mb-4">
                   <span className="block">REDEFINE</span>
-                  <span className="text-neon-cyan">LUXURY</span>
+                  <span className="text-neon-cyan relative inline-block">
+                    LUXURY
+                    <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-cyan to-transparent"></span>
+                  </span>
                 </h2>
-                <p className="text-light-300 md:text-lg mb-8 max-w-lg">
+                <p className="text-light-300 md:text-lg mb-8 max-w-lg leading-relaxed">
                   Experience the perfect fusion of innovative design and premium craftsmanship with our exclusive limited-edition collection.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -85,16 +99,20 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                {featuredProducts && featuredProducts.length > 0 && (
+                {featuredProducts && featuredProducts.length > 0 && featuredProducts[0].imageUrls && (
                   <>
-                    <img 
-                      src={featuredProducts[0].imageUrls[0]} 
-                      alt={featuredProducts[0].name} 
-                      className="w-full h-auto object-cover transform rotate-[-25deg] shadow-2xl"
-                    />
-                    <div className="absolute -bottom-4 -right-4 bg-dark-700/80 backdrop-blur-sm p-4 rounded-md">
-                      <span className="text-neon-cyan font-bebas text-xl">${featuredProducts[0].price}</span>
-                      <h3 className="text-light-100 font-medium">{featuredProducts[0].name.toUpperCase()}</h3>
+                    <div className="relative perspective">
+                      <img 
+                        src={featuredProducts[0].imageUrls[0]} 
+                        alt={featuredProducts[0].name} 
+                        className="w-full h-auto object-cover transform rotate-[-25deg] shadow-2xl rounded-lg border-2 border-neon-cyan/30"
+                      />
+                      {/* Glowing effect */}
+                      <div className="absolute inset-0 rounded-lg opacity-50 rotate-[-25deg] shadow-[0_0_20px_rgba(0,240,255,0.5)] pointer-events-none"></div>
+                    </div>
+                    <div className="absolute -bottom-4 -right-4 bg-dark-700/80 backdrop-blur-sm p-4 rounded-md border border-neon-cyan/30">
+                      <span className="text-neon-cyan font-bebas text-xl tracking-wider">${featuredProducts[0].price}</span>
+                      <h3 className="text-light-100 font-medium tracking-wide">{featuredProducts[0].name.toUpperCase()}</h3>
                     </div>
                   </>
                 )}
