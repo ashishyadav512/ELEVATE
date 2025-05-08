@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 187 100% 50%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Custom colors for our shoe store */
+  --dark-900: 0 0% 7%;
+  --dark-800: 0 0% 10%;
+  --dark-700: 0 0% 14%;
+  --dark-600: 0 0% 18%;
+  --dark-500: 0 0% 21%;
+  
+  --light-100: 0 0% 96%;
+  --light-200: 0 0% 88%;
+  --light-300: 0 0% 67%;
+  --light-400: 0 0% 54%;
+
+  --neon-cyan: 187 100% 50%;
+  --neon-pink: 345 100% 60%;
+  --neon-green: 145 100% 45%;
+  --neon-yellow: 45 100% 50%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 14%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 0 0% 18%;
+  --primary: 187 100% 50%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 187 100% 50%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dark-900 text-light-100 font-inter overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+/* Custom Classes */
+.font-bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.neon-border {
+  box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.neon-border:hover,
+.neon-border:focus {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.8), 0 0 30px rgba(0, 240, 255, 0.4);
+}
+
+.shadow-neon {
+  box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 80%, rgba(18, 18, 18, 1) 100%);
+}
+
+.radial-gradient {
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, rgba(18, 18, 18, 0) 70%);
+}
+
+/* Colors */
+.bg-dark-900 {
+  @apply bg-[#121212];
+}
+.bg-dark-800 {
+  @apply bg-[#1A1A1A];
+}
+.bg-dark-700 {
+  @apply bg-[#232323];
+}
+.bg-dark-600 {
+  @apply bg-[#2D2D2D];
+}
+.bg-dark-500 {
+  @apply bg-[#353535];
+}
+
+.text-light-100 {
+  @apply text-[#F5F5F5];
+}
+.text-light-200 {
+  @apply text-[#E0E0E0];
+}
+.text-light-300 {
+  @apply text-[#ABABAB];
+}
+.text-light-400 {
+  @apply text-[#8A8A8A];
+}
+
+.text-neon-cyan, .bg-neon-cyan {
+  @apply text-[#00F0FF] bg-[#00F0FF];
+}
+.text-neon-pink, .bg-neon-pink {
+  @apply text-[#FF3366] bg-[#FF3366];
+}
+.text-neon-green, .bg-neon-green {
+  @apply text-[#00E676] bg-[#00E676];
+}
+.text-neon-yellow, .bg-neon-yellow {
+  @apply text-[#FFC107] bg-[#FFC107];
+}
+
+.border-dark-600 {
+  @apply border-[#2D2D2D];
+}
+.border-neon-cyan {
+  @apply border-[#00F0FF];
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+  50% { box-shadow: 0 0 25px rgba(0, 240, 255, 0.8); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 15s linear infinite;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 2px #00F0FF;
+}
+
+.form-checkbox {
+  @apply rounded bg-dark-600 border-[#353535] text-neon-cyan focus:ring-0 focus:ring-offset-0;
+}
+
+.hover\:border-neon-cyan:hover {
+  @apply border-[#00F0FF];
+}
+
+.hover\:text-neon-cyan:hover {
+  @apply text-[#00F0FF];
+}
+
+.hover\:bg-neon-cyan:hover {
+  @apply bg-[#00F0FF];
+}
+
+/* 3D transforms */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
