@@ -1,0 +1,73 @@
+1. Page Structure & Content Outline (for ChatGPT)
+Prompt:
+
+“I want to build a dark‑theme, multi‑page landing site for a high‑end shoe shop. The pages should include:
+
+Home with full‑screen hero, parallax scroll, featured collections carousel.
+
+Shop grid with filters (style, color, size).
+
+Product Detail with 3D‑flip image viewer, dynamic sizing selector, add‑to‑cart animation.
+
+About with team bios and motion‑triggered stats counters.
+
+Contact with interactive map and dark‑mode form.
+
+Tech stack: React, React‑Router, Tailwind CSS, Framer Motion.
+Requirements:
+
+True dark theme (blacks, charcoals, neons).
+
+Parallax scrolling, hover‑triggered glows, smooth page‑transition animations.
+
+Mobile‑responsive, SEO‑friendly.
+
+Generate folder structure, React component skeletons with Tailwind classes, routing setup, and placeholder content.”
+
+2. Hero‑Section Visuals (for Midjourney)
+Prompt:
+
+/imagine prompt: Ultra‑modern dark‑mode shoe store hero banner, sleek neon highlights, 3D rendered premium sneakers floating, dynamic light trails, futuristic UI overlays –v 5 –ar 16:9 –style cinematic
+
+3. Animation Scripts (for Framer Motion)
+Prompt:
+
+“Write Framer Motion variants for:
+
+A parallax background that moves slower than foreground content.
+
+A hover effect on product cards that scales up and adds neon glow.
+
+Page transitions: fade out current page, slide in next page from right.
+Use React functional components and Tailwind CSS classes.”
+
+4. Dark‑Theme Color Palette (for ChatGPT)
+Prompt:
+
+“Suggest a dark‑mode Tailwind CSS color palette for a luxury shoe brand. Include custom shades for background, cards, text, primary buttons, neon accent. Provide the tailwind.config.js extension.”
+
+5. Multi‑Page Routing & Navigation (for ChatGPT)
+Prompt:
+
+“Generate React‑Router v6 code for a navbar that:
+
+Highlights active link.
+
+Collapses into a hamburger menu on mobile.
+
+Uses smooth scroll for anchor links on the Home page.
+
+Applies dark‑theme Tailwind styling.”
+
+6. Product Grid with Dynamic Filters (for ChatGPT)
+Prompt:
+
+“Create a React component <ShopGrid> that:
+
+Fetches product JSON from /api/products.
+
+Renders a grid of cards with image, name, price.
+
+Implements live filters (color, size) and client‑side sorting (price, popularity).
+
+Uses Tailwind for styling and Framer Motion for card entrance animations.”
