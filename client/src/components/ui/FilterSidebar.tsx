@@ -51,19 +51,19 @@ const FilterSidebar = ({
   const sizes = ['7', '7.5', '8', '8.5', '9', '9.5', '10', '10.5', '11', '11.5', '12', '13'];
 
   return (
-    <div className="lg:col-span-1 bg-dark-700 rounded-lg p-6">
+    <div className="lg:col-span-1 bg-gray-800 rounded-lg p-6">
       <div className="mb-8">
         <h3 className="font-semibold mb-4 uppercase">Categories</h3>
         <div className="space-y-2">
           {categories.map((category) => (
-            <label key={category.id} className="flex items-center text-light-300 hover:text-light-100 cursor-pointer">
+            <label key={category.id} className="flex items-center text-gray-300 hover:text-gray-100 cursor-pointer">
               <input
                 type="checkbox"
-                className="form-checkbox mr-3"
+                className="form-checkbox mr-3 text-cyan-400 border-gray-600 rounded focus:ring-cyan-400"
                 checked={selectedCategories.includes(category.id)}
                 onChange={() => onCategoryChange(category.id)}
               />
-              {category.name} <span className="ml-auto">42</span>
+              {category.name}
             </label>
           ))}
         </div>
@@ -77,9 +77,9 @@ const FilterSidebar = ({
           max={450}
           value={priceValue}
           onChange={handlePriceChange}
-          className="w-full h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+          className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-cyan-400"
         />
-        <div className="flex justify-between mt-2 text-sm text-light-300">
+        <div className="flex justify-between mt-2 text-sm text-gray-300">
           <span>${50}</span>
           <span className="text-cyan-400 font-medium">${priceValue}</span>
           <span>${450}</span>
@@ -96,12 +96,13 @@ const FilterSidebar = ({
               style={{ 
                 backgroundColor: color.value,
                 borderWidth: '2px',
-                borderColor: selectedColors.includes(color.name) ? '#00F0FF' : '#2D2D2D',
-                boxShadow: selectedColors.includes(color.name) ? '0 0 8px rgba(0, 240, 255, 0.6)' : 'none'
+                borderColor: selectedColors.includes(color.name) ? '#22d3ee' : '#374151',
+                boxShadow: selectedColors.includes(color.name) ? '0 0 8px rgba(34, 211, 238, 0.6)' : 'none'
               }}
               onClick={() => onColorChange(color.name)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label={`Filter by ${color.name} color`}
             />
           ))}
         </div>
@@ -115,9 +116,9 @@ const FilterSidebar = ({
               key={size}
               className={`py-2 border ${
                 selectedSizes.includes(size)
-                  ? 'border-neon-cyan text-neon-cyan bg-dark-800'
-                  : 'border-dark-600 text-light-300'
-              } rounded hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300`}
+                  ? 'border-cyan-400 text-cyan-400 bg-gray-900'
+                  : 'border-gray-700 text-gray-300'
+              } rounded hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300`}
               onClick={() => onSizeChange(size)}
               whileTap={{ scale: 0.95 }}
             >
@@ -129,7 +130,7 @@ const FilterSidebar = ({
       
       <div>
         <motion.button
-          className="w-full py-3 bg-cyan-400 text-dark-900 font-bold uppercase rounded-sm"
+          className="w-full py-3 bg-cyan-400 text-gray-900 font-bold uppercase rounded-sm"
           onClick={onApplyFilters}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
@@ -137,9 +138,8 @@ const FilterSidebar = ({
           Apply Filters
         </motion.button>
         <motion.button
-          className="w-full py-3 text-light-300 font-medium mt-2"
+          className="w-full py-3 text-gray-300 font-medium mt-2 hover:text-cyan-400 transition-colors"
           onClick={onResetFilters}
-          whileHover={{ color: '#00F0FF' }}
         >
           Reset Filters
         </motion.button>

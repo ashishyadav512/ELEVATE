@@ -125,7 +125,7 @@ const Shop = () => {
   };
 
   return (
-    <section id="shop" className="pt-24 pb-24 bg-dark-800">
+    <section id="shop" className="pt-24 pb-24 bg-gray-900">
       <div className="container mx-auto px-6">
         <motion.div 
           className="mb-12"
@@ -134,9 +134,9 @@ const Shop = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-4">
-            OUR <span className="text-cyan-300">COLLECTION</span>
+            OUR <span className="text-cyan-400">COLLECTION</span>
           </h2>
-          <p className="text-light-300 max-w-2xl">
+          <p className="text-gray-300 max-w-2xl">
             Browse our premium selection of footwear designed for performance, style, and comfort. Filter by your preferences to find your perfect pair.
           </p>
         </motion.div>
@@ -163,16 +163,16 @@ const Shop = () => {
           {/* Products Grid */}
           <div className="lg:col-span-3">
             {/* Sorting Options */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 p-4 bg-dark-700 rounded-lg">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 p-4 bg-gray-800 rounded-lg">
               <div className="mb-4 md:mb-0">
-                <span className="text-light-300">
+                <span className="text-gray-300">
                   Showing {indexOfFirstProduct + 1}-{Math.min(indexOfLastProduct, filteredProducts.length)} of {filteredProducts.length} products
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex border border-dark-600 rounded-sm overflow-hidden">
+                <div className="flex border border-gray-700 rounded-sm overflow-hidden">
                   <button 
-                    className={`px-4 py-2 ${displayMode === 'grid' ? 'bg-dark-600 text-light-100' : 'text-light-300 hover:text-light-100'}`}
+                    className={`px-4 py-2 ${displayMode === 'grid' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'}`}
                     onClick={() => setDisplayMode('grid')}
                     aria-label="Grid view"
                   >
@@ -184,7 +184,7 @@ const Shop = () => {
                     </svg>
                   </button>
                   <button 
-                    className={`px-4 py-2 ${displayMode === 'list' ? 'bg-dark-600 text-light-100' : 'text-light-300 hover:text-light-100'}`}
+                    className={`px-4 py-2 ${displayMode === 'list' ? 'bg-gray-700 text-gray-100' : 'text-gray-300 hover:text-gray-100'}`}
                     onClick={() => setDisplayMode('list')}
                     aria-label="List view"
                   >
@@ -196,8 +196,7 @@ const Shop = () => {
                   </button>
                 </div>
                 <select 
-                  className="bg-gray-800 border-0 text-gray-100 rounded-sm px-4 py-2 focus:ring-cyan-400"
-
+                  className="bg-gray-800 border border-gray-700 text-gray-100 rounded-sm px-4 py-2 focus:ring-cyan-400 focus:border-cyan-400"
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
                 >
@@ -213,7 +212,21 @@ const Shop = () => {
             {isLoading ? (
               <div className="flex justify-center items-center h-64">
                 <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-400"></div>
-
+              </div>
+            ) : filteredProducts.length === 0 ? (
+              <div className="flex flex-col items-center justify-center h-64 bg-gray-800 rounded-lg p-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500 mb-4">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <h3 className="text-xl font-medium text-gray-200 mb-2">No products found</h3>
+                <p className="text-gray-400 text-center mb-4">Try adjusting your filters or search criteria</p>
+                <button 
+                  className="px-4 py-2 bg-cyan-400 text-gray-900 font-medium rounded-md"
+                  onClick={resetFilters}
+                >
+                  Reset Filters
+                </button>
               </div>
             ) : (
               <motion.div 
@@ -261,10 +274,9 @@ const Shop = () => {
                       key={number + 1}
                       className={`w-10 h-10 flex items-center justify-center rounded-sm ${
                         currentPage === number + 1 
-                          ? 'bg-cyan-400 text-dark-900 font-medium' 
+                          ? 'bg-cyan-400 text-gray-900 font-medium' 
                           : 'border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300'
                       }`}
-
                       onClick={() => paginate(number + 1)}
                     >
                       {number + 1}

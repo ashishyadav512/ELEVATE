@@ -9,6 +9,7 @@ import Shop from "@/pages/Shop";
 import ProductDetail from "@/pages/ProductDetail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Checkout from "@/pages/Checkout";
 import { useEffect } from "react";
 import { CartProvider } from "./context/CartContext";
 import { SearchProvider } from "./context/SearchContext";
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/product/:id" component={ProductDetail} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/checkout" component={Checkout} />
       <Route component={NotFound} />
     </Switch>
   );
