@@ -246,7 +246,7 @@ const Shop = () => {
               <div className="flex justify-center mt-12">
                 <nav className="flex space-x-2">
                   <button 
-                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     onClick={() => paginate(currentPage - 1)}
                     disabled={currentPage === 1}
                     aria-label="Previous page"
@@ -261,8 +261,8 @@ const Shop = () => {
                       key={number + 1}
                       className={`w-10 h-10 flex items-center justify-center rounded-sm ${
                         currentPage === number + 1 
-                          ? 'bg-neon-cyan text-dark-900 font-medium' 
-                          : 'border border-gray-600 text-gray-300 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300'
+                          ? 'bg-cyan-400 text-dark-900 font-medium' 
+                          : 'border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300'
                       }`}
 
                       onClick={() => paginate(number + 1)}
@@ -272,7 +272,7 @@ const Shop = () => {
                   ))}
                   
                   <button 
-                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-10 h-10 flex items-center justify-center rounded-sm border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     onClick={() => paginate(currentPage + 1)}
                     disabled={currentPage === totalPages}
                     aria-label="Next page"

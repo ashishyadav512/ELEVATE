@@ -1,5 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'wouter';
+import { useCart } from '../../context/CartContext';
+import { useSearch } from '../../context/SearchContext';
+import { useQuery } from '@tanstack/react-query';
+import { Product } from '@shared/schema';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

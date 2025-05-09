@@ -10,6 +10,8 @@ import ProductDetail from "@/pages/ProductDetail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import { useEffect } from "react";
+import { CartProvider } from "./context/CartContext";
+import { SearchProvider } from "./context/SearchContext";
 
 function Router() {
   return (
@@ -52,29 +54,33 @@ function App() {
   };
 
   return (
-    <TooltipProvider>
-      <div className="flex flex-col min-h-screen bg-dark-900 text-light-100 font-inter">
-        <Navbar />
-        <main className="flex-grow">
-          <Router />
-        </main>
-        <Footer />
-        
-        {/* Back to Top Button */}
-        <button 
-          id="back-to-top"
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 w-12 h-12 bg-neon-cyan text-dark-900 rounded-full hidden items-center justify-center shadow-lg hover:bg-white transition-all duration-300 z-50"
-          aria-label="Back to top"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m18 15-6-6-6 6"/>
-          </svg>
-        </button>
-        
-        <Toaster />
-      </div>
-    </TooltipProvider>
+    <CartProvider>
+      <SearchProvider>
+        <TooltipProvider>
+          <div className="flex flex-col min-h-screen bg-gray-950 text-gray-100 font-inter">
+            <Navbar />
+            <main className="flex-grow">
+              <Router />
+            </main>
+            <Footer />
+            
+            {/* Back to Top Button */}
+            <button 
+              id="back-to-top"
+              onClick={scrollToTop}
+              className="fixed bottom-6 right-6 w-12 h-12 bg-cyan-400 text-gray-900 rounded-full hidden items-center justify-center shadow-lg hover:bg-white transition-all duration-300 z-50"
+              aria-label="Back to top"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            
+            <Toaster />
+          </div>
+        </TooltipProvider>
+      </SearchProvider>
+    </CartProvider>
   );
 }
 

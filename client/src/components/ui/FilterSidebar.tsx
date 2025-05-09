@@ -77,11 +77,11 @@ const FilterSidebar = ({
           max={450}
           value={priceValue}
           onChange={handlePriceChange}
-          className="w-full h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer accent-neon-cyan"
+          className="w-full h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer accent-cyan-400"
         />
         <div className="flex justify-between mt-2 text-sm text-light-300">
           <span>${50}</span>
-          <span className="text-neon-cyan font-medium">${priceValue}</span>
+          <span className="text-cyan-400 font-medium">${priceValue}</span>
           <span>${450}</span>
         </div>
       </div>
@@ -129,7 +129,7 @@ const FilterSidebar = ({
       
       <div>
         <motion.button
-          className="w-full py-3 bg-neon-cyan text-dark-900 font-bold uppercase rounded-sm"
+          className="w-full py-3 bg-cyan-400 text-dark-900 font-bold uppercase rounded-sm"
           onClick={onApplyFilters}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
