@@ -6,10 +6,12 @@ import { Product } from '@shared/schema';
 import ProductViewer3D from '@/components/ui/ProductViewer3D';
 import SizeSelector from '@/components/ui/SizeSelector';
 import { useToast } from '@/hooks/use-toast';
+import { useCart } from '@/context/CartContext';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { toast } = useToast();
+  const { addToCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -34,6 +36,8 @@ const ProductDetail = () => {
   };
 
   const handleAddToCart = () => {
+    if (!product) return;
+    
     if (!selectedSize) {
       toast({
         title: "Size Required",
@@ -43,9 +47,17 @@ const ProductDetail = () => {
       return;
     }
 
+    // Add the product to the cart with selected options
+    addToCart(
+      product, 
+      quantity, 
+      selectedSize, 
+      selectedColor || ''
+    );
+
     toast({
       title: "Added to Cart",
-      description: `${product?.name} (Size: ${selectedSize}) has been added to your cart.`,
+      description: `${product.name} (Size: ${selectedSize}) has been added to your cart.`,
     });
   };
 
@@ -87,10 +99,10 @@ const ProductDetail = () => {
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-12">
           {/* Product Images */}
           <div className="md:w-1/2">
-            <ProductViewer3D images={product.imageUrls} />
+            <ProductViewer3D images={product.imageUrls || []} />
             
             <div className="grid grid-cols-4 gap-2">
-              {product.imageUrls.map((image, index) => (
+              {(product.imageUrls || []).map((image, index) => (
                 <button 
                   key={index}
                   className={`h-24 bg-dark-700 rounded overflow-hidden ${index === selectedImageIndex ? 'border-2 border-neon-cyan' : ''}`}

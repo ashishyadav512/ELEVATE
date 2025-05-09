@@ -6,6 +6,14 @@ interface ProductViewer3DProps {
 }
 
 const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
+  // Prevent errors when images array is empty
+  if (!images.length) {
+    return (
+      <div className="relative h-96 md:h-[500px] mb-4 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+        <p className="text-gray-400">No product images available</p>
+      </div>
+    );
+  }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
   const viewerRef = useRef<HTMLDivElement>(null);
@@ -94,7 +102,7 @@ const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
   };
 
   return (
-    <div className="relative h-96 md:h-[500px] mb-4 bg-dark-700 rounded-lg overflow-hidden perspective">
+    <div className="relative h-96 md:h-[500px] mb-4 bg-gray-800 rounded-lg overflow-hidden perspective">
       <motion.div 
         ref={viewerRef}
         className="absolute inset-0 transform-style-3d cursor-grab"
@@ -111,7 +119,7 @@ const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
       
       <div className="absolute bottom-3 right-3 flex space-x-2">
         <motion.button 
-          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-cyan-400"
+          className="w-10 h-10 bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-100 hover:text-cyan-400"
           onClick={rotateLeft}
           whileTap={{ scale: 0.9 }}
           aria-label="Rotate left"
@@ -121,7 +129,7 @@ const ProductViewer3D = ({ images }: ProductViewer3DProps) => {
           </svg>
         </motion.button>
         <motion.button 
-          className="w-10 h-10 bg-dark-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-light-100 hover:text-cyan-400"
+          className="w-10 h-10 bg-gray-900/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-100 hover:text-cyan-400"
           onClick={rotateRight}
           whileTap={{ scale: 0.9 }}
           aria-label="Rotate right"
